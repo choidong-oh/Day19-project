@@ -9,16 +9,14 @@ namespace Day19_과제
 {
     internal class Program
     {
+       
         static void Main(string[] args)
         {
-            //??이거왜함?
-            //?? 이거왜함 최종
-            //2번??
-            //이거 결과값??이 왜이렇게 나오나
             //카드덱
             //1리스트로 쓸지 스택으로 쓸지 고르라는건가?
             //2아니면 둘다 쓸수있는건가?*****************
 
+            //의문??
             //대충 list는 배열, dictionary는 찾는거, 
 
 
@@ -28,6 +26,7 @@ namespace Day19_과제
             //UsableItem[] item = new UsableItem[3];
 
             //이거왜함???
+            //넣는걸 할당안햇음
             //item[0] = new UsableItem();
             //item[1] = new UsableItem();
             //item[2] = new UsableItem();
@@ -51,22 +50,22 @@ namespace Day19_과제
 
             //2번 list
 
-            Player player = new Player();
-            UsableItem item = new UsableItem(); //애를 써야댐? 리스트에서 할당 한거인가?
-            List<UsableItem> inventory = new List<UsableItem>();
+            //Player player = new Player();
+            //UsableItem item = new UsableItem(); //애를 써야댐? 리스트에서 할당 한거인가?
+            //List<UsableItem> inventory = new List<UsableItem>();
 
 
-            //이거 결과값?? 이 왜이렇게 나오나
-            item.Name = "총";
-            inventory.Add(item);
-            item.Name = "권총";
-            inventory.Add(item);
-            item.Name = "칼";
-            inventory.Add(item);
+            ////이거 결과값?? 이 왜이렇게 나오나
+            //item.Name = "총";
+            //inventory.Add(item);
+            //item.Name = "권총";
+            //inventory.Add(item);
+            //item.Name = "칼";
+            //inventory.Add(item);
 
-            Console.WriteLine(inventory[0].Name);
-            Console.WriteLine(inventory[1].Name);
-            Console.WriteLine(inventory[2].Name);
+            //Console.WriteLine(inventory[0].Name);
+            //Console.WriteLine(inventory[1].Name);
+            //Console.WriteLine(inventory[2].Name);
 
 
             //??이거왜함 최종// 똑같은걸 할당한거 또 해야대는지
@@ -81,39 +80,59 @@ namespace Day19_과제
 
 
             //카드셔플
+            //디셔널리 안넣엇음
+            //근데 굳이 쓸필요가 잇나? 11이면 j, 12면 q 이런식으로 if문 만들면 돼지안나?
             Card card = new Card();
             Shape shape = new Shape();
-
-            CardDeck carddeck = new CardDeck(card,shape);
             
+
+            CardDeck carddeck = new CardDeck(card, shape);
+
             carddeck.ShowTopCard();//사용하지 않는 맨위카드
             carddeck.DrawCard();//사용한걸 빼서 담아둠
 
+            //if (carddeck.unusedCards[5].CardNum == 11)
+            //{
+            //    carddeck.unusedCards[5].CardNum = (int)jqk.j;
+            //}
 
-            int count = 1;//가독성
-            //사용하지않는거출력
-            foreach (var ele in carddeck.unusedCards)
+            //사용하지 않는거 출력
+            for (int i = 0; i < carddeck.unusedCards.Count; i++)
             {
-                
-                Console.Write("count : "+count+" ");
-                Console.Write(ele.CardNum);
-                Console.WriteLine(ele.Shapes);
-                count++;
+                Console.Write($"count : {i + 1} \t");
+                if (carddeck.unusedCards[i].CardNum == 11)
+                {
+                    Console.Write("J\t");
+                }
+                else if(carddeck.unusedCards[i].CardNum == 12)
+                {
+                    Console.Write("Q\t");
+                }
+                else if (carddeck.unusedCards[i].CardNum == 13)
+                {
+                    Console.Write("K\t");
+                }
+                else
+                {
+                    Console.Write(carddeck.unusedCards[i].CardNum + "\t");
+                }
+                Console.WriteLine(carddeck.unusedCards[i].Shapes);
+
             }
-            Console.WriteLine("======================================");
+
+            Console.WriteLine("===================================");
             //사용한거 출력
-            foreach (var ele in carddeck.usedCards)
+            for (int i = 0; i < carddeck.usedCards.Count; i++)
             {
-                Console.Write(ele.CardNum);
-                Console.WriteLine(ele.Shapes);
+                Console.Write($"count : {i + 1} ");
+                Console.Write(carddeck.usedCards[i].CardNum);
+                Console.WriteLine(carddeck.usedCards[i].Shapes);
             }
 
-
-
-
+        }
 
 
 
         }
     }
-}
+
