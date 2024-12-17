@@ -82,57 +82,86 @@ namespace Day19_과제
             //카드셔플
             //디셔널리 안넣엇음
             //근데 굳이 쓸필요가 잇나? 11이면 j, 12면 q 이런식으로 if문 만들면 돼지안나?
-            Card card = new Card();
-            Shape shape = new Shape();
-            
+            //Card card = new Card();
+            //Shape shape = new Shape();
 
-            CardDeck carddeck = new CardDeck(card, shape);
 
-            carddeck.ShowTopCard();//사용하지 않는 맨위카드
-            carddeck.DrawCard();//사용한걸 빼서 담아둠
+            //CardDeck carddeck = new CardDeck(card, shape);
 
-            //if (carddeck.unusedCards[5].CardNum == 11)
+            //carddeck.ShowTopCard();//사용하지 않는 맨위카드
+            //carddeck.DrawCard();//사용한걸 빼서 담아둠
+
+            ////if (carddeck.unusedCards[5].CardNum == 11)
+            ////{
+            ////    carddeck.unusedCards[5].CardNum = (int)jqk.j;
+            ////}
+
+            ////사용하지 않는거 출력
+            //for (int i = 0; i < carddeck.unusedCards.Count; i++)
             //{
-            //    carddeck.unusedCards[5].CardNum = (int)jqk.j;
+            //    Console.Write($"count : {i + 1} \t");
+            //    if (carddeck.unusedCards[i].CardNum == 11)
+            //    {
+            //        Console.Write("J\t");
+            //    }
+            //    else if(carddeck.unusedCards[i].CardNum == 12)
+            //    {
+            //        Console.Write("Q\t");
+            //    }
+            //    else if (carddeck.unusedCards[i].CardNum == 13)
+            //    {
+            //        Console.Write("K\t");
+            //    }
+            //    else
+            //    {
+            //        Console.Write(carddeck.unusedCards[i].CardNum + "\t");
+            //    }
+            //    Console.WriteLine(carddeck.unusedCards[i].Shapes);
+
             //}
 
-            //사용하지 않는거 출력
-            for (int i = 0; i < carddeck.unusedCards.Count; i++)
-            {
-                Console.Write($"count : {i + 1} \t");
-                if (carddeck.unusedCards[i].CardNum == 11)
-                {
-                    Console.Write("J\t");
-                }
-                else if(carddeck.unusedCards[i].CardNum == 12)
-                {
-                    Console.Write("Q\t");
-                }
-                else if (carddeck.unusedCards[i].CardNum == 13)
-                {
-                    Console.Write("K\t");
-                }
-                else
-                {
-                    Console.Write(carddeck.unusedCards[i].CardNum + "\t");
-                }
-                Console.WriteLine(carddeck.unusedCards[i].Shapes);
+            //Console.WriteLine("===================================");
+            ////사용한거 출력
+            //for (int i = 0; i < carddeck.usedCards.Count; i++)
+            //{
+            //    Console.Write($"count : {i + 1} ");
+            //    Console.Write(carddeck.usedCards[i].CardNum);
+            //    Console.WriteLine(carddeck.usedCards[i].Shapes);
+            //}
 
-            }
 
-            Console.WriteLine("===================================");
-            //사용한거 출력
-            for (int i = 0; i < carddeck.usedCards.Count; i++)
-            {
-                Console.Write($"count : {i + 1} ");
-                Console.Write(carddeck.usedCards[i].CardNum);
-                Console.WriteLine(carddeck.usedCards[i].Shapes);
-            }
+            VendingMachine vendingMachine = new VendingMachine();
+            Milk pinkmilk = new Milk();
+            Milk chocomilk = new Milk();
+            Milk coffeemilk = new Milk();
+            Milk milk = new Milk();
 
-        }
+            vendingMachine.addMilk(pinkmilk,1);
+            vendingMachine.addMilk(chocomilk,5);
+            vendingMachine.addMilk(coffeemilk,8);
+            vendingMachine.addMilk(milk,13);
+
+            vendingMachine.DequeueMilk(chocomilk);
+            vendingMachine.DequeueMilk(pinkmilk);
+            vendingMachine.DequeueMilk(coffeemilk);
+            vendingMachine.DequeueMilk(chocomilk);
+            vendingMachine.DequeueMilk(chocomilk);
+
+
+
+
+
 
 
 
         }
+
+
+
+
+
+
+
+    }
     }
 
