@@ -36,15 +36,6 @@ namespace Day19_과제
                 Console.WriteLine(totalmilk.Count);
 
             }
-            
-            
-            
-            
-
-            
-
-
-
 
         }
 
@@ -57,17 +48,6 @@ namespace Day19_과제
 
 
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

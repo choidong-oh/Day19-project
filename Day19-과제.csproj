@@ -44,11 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="asd.cs" />
+    <Compile Include="Bullet.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardDeck.cs" />
+    <Compile Include="Grenade.cs" />
+    <Compile Include="Gun.cs" />
     <Compile Include="Milk.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsableItem.cs" />
     <Compile Include="VendingMachine.cs" />

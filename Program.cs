@@ -12,9 +12,10 @@ namespace Day19_과제
        
         static void Main(string[] args)
         {
-            //카드덱
-            //1리스트로 쓸지 스택으로 쓸지 고르라는건가?
-            //2아니면 둘다 쓸수있는건가?*****************
+            //??메인문
+            //반환하면 어디에씀
+
+
 
             //의문??
             //대충 list는 배열, dictionary는 찾는거, 
@@ -129,21 +130,45 @@ namespace Day19_과제
             //    Console.WriteLine(carddeck.usedCards[i].Shapes);
             //}
 
-
-            VendingMachine vendingMachine = new VendingMachine();
+            //우유
+            //VendingMachine vendingMachine = new VendingMachine();
            
 
-            vendingMachine.addMilk(new Milk() { shelfLife = 12});
-            vendingMachine.addMilk(new Milk() { shelfLife = 5});
-            vendingMachine.addMilk(new Milk() { shelfLife = 7});
-            vendingMachine.addMilk(new Milk() { shelfLife = 8});
+            //vendingMachine.addMilk(new Milk() { shelfLife = 12});
+            //vendingMachine.addMilk(new Milk() { shelfLife = 5});
+            //vendingMachine.addMilk(new Milk() { shelfLife = 7});
+            //vendingMachine.addMilk(new Milk() { shelfLife = 8});
             
 
-            vendingMachine.DequeueMilk();
-            vendingMachine.DequeueMilk();
-            vendingMachine.DequeueMilk();
-            vendingMachine.DequeueMilk();
+            //vendingMachine.DequeueMilk();
+            //vendingMachine.DequeueMilk();
+            //vendingMachine.DequeueMilk();
+            //vendingMachine.DequeueMilk();
             
+
+            //건
+            Gun gun = new Gun();
+            string name1 = "Bullet";
+            string name2 = "Grenade";
+
+
+
+            //신기하네 출력하고 null인지 판명??
+            if (gun.Show(name1) == null)
+            {
+                Console.WriteLine("null");
+            }
+
+            
+            Projectile projectile = gun.Show(name1);
+
+            //반환하면 어디에씀
+            projectile._damage = 50;
+
+
+
+
+
 
 
 
