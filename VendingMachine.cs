@@ -15,11 +15,10 @@ namespace Day19_과제
 
         //en이추가 d어저쩌구가 빼기
         Queue<Milk> totalmilk = new Queue<Milk>();
-        Milk Milk = new Milk();
 
 
         //빼다
-        public void DequeueMilk(Milk milk)
+        public void DequeueMilk( )
         {
 
             if(totalmilk.Count == 0)
@@ -28,10 +27,11 @@ namespace Day19_과제
             }
             else
             {
-                totalmilk.Dequeue();
+                
+                Milk temp = totalmilk.Dequeue();
 
 
-                Console.WriteLine("우유 유통기한은 : " + milk.shelfLife);
+                Console.WriteLine("우유 유통기한은 : " + temp.shelfLife);
                 Console.Write("큐에 남아있는 갯수 : ");
                 Console.WriteLine(totalmilk.Count);
 
@@ -49,10 +49,9 @@ namespace Day19_과제
         }
 
         //추가하다
-        public void addMilk(Milk milk, int ShelfLife)
+        public void addMilk(Milk milk)
         {
             
-            milk.shelfLife = ShelfLife;
             totalmilk.Enqueue(milk);
 
 

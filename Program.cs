@@ -131,21 +131,19 @@ namespace Day19_과제
 
 
             VendingMachine vendingMachine = new VendingMachine();
-            Milk pinkmilk = new Milk();
-            Milk chocomilk = new Milk();
-            Milk coffeemilk = new Milk();
-            Milk milk = new Milk();
+           
 
-            vendingMachine.addMilk(pinkmilk,1);
-            vendingMachine.addMilk(chocomilk,5);
-            vendingMachine.addMilk(coffeemilk,8);
-            vendingMachine.addMilk(milk,13);
+            vendingMachine.addMilk(new Milk() { shelfLife = 12});
+            vendingMachine.addMilk(new Milk() { shelfLife = 5});
+            vendingMachine.addMilk(new Milk() { shelfLife = 7});
+            vendingMachine.addMilk(new Milk() { shelfLife = 8});
+            
 
-            vendingMachine.DequeueMilk(chocomilk);
-            vendingMachine.DequeueMilk(pinkmilk);
-            vendingMachine.DequeueMilk(coffeemilk);
-            vendingMachine.DequeueMilk(chocomilk);
-            vendingMachine.DequeueMilk(chocomilk);
+            vendingMachine.DequeueMilk();
+            vendingMachine.DequeueMilk();
+            vendingMachine.DequeueMilk();
+            vendingMachine.DequeueMilk();
+            
 
 
 
